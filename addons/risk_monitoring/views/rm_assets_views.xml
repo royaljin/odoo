@@ -2,7 +2,7 @@
 <odoo>
     <data>
 
-        <record id="view_employee_filter" model="ir.ui.view">
+        <record id="view_InvestedAssets_filter" model="ir.ui.view">
             <field name="name">hr.employee.search</field>
             <field name="model">hr.employee</field>
             <field name="arch" type="xml">
