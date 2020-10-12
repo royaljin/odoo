@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_rm_employee_user,rm.employee user,model_rm_employee,group_rm_user,1,1,1,1
+access_rm_InvestedAssets_user,rm.InvestedAssets,model_rm_InvestedAssets,group_rm_user,1,1,1,1
+access_rm_RiskFindings_user,rm.RiskFindings,model_rm_RiskFindings,group_rm_user,1,1,1,1
