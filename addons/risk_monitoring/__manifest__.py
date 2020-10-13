@@ -9,6 +9,11 @@
     'summary': 'Risk Monitoring for all Assets',
     'description': "",
     'website': '',
+    'depends': ['web'],
+    'data': [
+        'views/rm_assets_views.xml',
+        'views/rm_riskfindings_views.xml',
+    ],
     'installable': True,
     'application': True,
     'auto_install': False,
