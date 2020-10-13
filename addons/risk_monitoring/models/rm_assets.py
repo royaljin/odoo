@@ -10,7 +10,7 @@ class InvestedAssets(models.Model):
     _rec_name = "name"
     _order = "DateInvested"
 
-    Asset_ID = fields.Id('Asset ID')
+    #Asset_ID = fields.Id('Asset ID')
     name = fields.Char('Department Name', required=True)
     active = fields.Boolean('Active', default=True)
     InvAmount = fields.Integer('Invested Amount')
