@@ -11,6 +11,7 @@
     'website': '',
     'depends': ['web'],
     'data': [
+        'security/ir.model.access.csv',
         'views/rm_assets_views.xml',
         'views/rm_riskfindings_views.xml',
     ],
