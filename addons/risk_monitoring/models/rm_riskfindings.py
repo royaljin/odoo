@@ -17,7 +17,7 @@ class RiskFindings(models.Model):
     _order = 'name'
 
     risk_ID = fields.Char()
-    name = fields.Char(string="Employee Name", related='resource_id.name', store=True, readonly=False, tracking=True)
+    name = fields.Char(string="Risk Description", store=True, readonly=False, tracking=True)
     FindingDate = fields.date("Date of Findings")
     note = fields.Text('Note')
 
