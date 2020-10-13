@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+        <menuitem name="Asset Module" id="asset_root_menu" web_icon="risk_monitoring,static/description/icon.png"/>
 
         <record id="action_InvestedAssets_list" model="ir.actions.act_window">
             <field name="name">Invested Asset list</field>
