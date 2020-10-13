@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data>
 
-        <record id="open_view_InvestedAssets_list" model="ir.actions.act_window">
+        <record id="action_InvestedAssets_list" model="ir.actions.act_window">
             <field name="name">Invested Asset list</field>
-            <field name="res_model">rm.InvestedAssets</field>
+            <field name="res_model">rm.investedassets</field>
             <field name="view_mode">form,tree</field>
         </record>
 
-
-    </data>
+        <menuitem name="Asset" id="main_asset_menu" />
+        <menuitem name="Asset List" id="asset_menu" parent="main_asset_menu" />
+        <menuitem name="Asset Names" id="asset_name_menu" parent="asset_menu" action="action_InvestedAssets_list"/>
 </odoo>
