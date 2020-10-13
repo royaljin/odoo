@@ -1,12 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError
+from odoo import fields, models
 
 
 class InvestedAssets(models.Model):
-    _name = "rm.InvestedAssets"
+    _name = "rm.investedassets"
     _description = "Invested Asset list"
     _rec_name = "name"
     _order = "DateInvested"
@@ -15,9 +14,9 @@ class InvestedAssets(models.Model):
     name = fields.Char('Department Name', required=True)
     active = fields.Boolean('Active', default=True)
     InvAmount = fields.Integer('Invested Amount')
-    DateInvested = fields.date("Date of Investment")
+    DateInvested = fields.Date("Date of Investment")
 
-    risk_ID = fields.One2many('rm.RiskFindings','risk_ID', 'Various Risk findings')
+    #risk_ID = fields.One2many('rm.RiskFindings','risk_ID', 'Various Risk findings')
 
     """
     parent_id = fields.Many2one('hr.department', string='Parent Department', index=True, domain="['|', ('company_id', '=', False), ('company_id', '=', company_id)]")
