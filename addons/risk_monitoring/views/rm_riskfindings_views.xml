@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data>
-        <record id="open_view_RiskFindings_list" model="ir.actions.act_window">
-            <field name="name">Findings of Asset Risks</field>
-            <field name="res_model">rm.RiskFindings</field>
-            <field name="view_mode">form,tree</field>
-        </record>
-    </data>
+    <record id="action_RiskFindings_list" model="ir.actions.act_window">
+        <field name="name">Findings of Asset Risks</field>
+        <field name="res_model">rm.riskfindings</field>
+        <field name="view_mode">form,tree</field>
+    </record>
+    <menuitem name="Risk" id="main_risk_menu" />
+    <menuitem name="Risk List" id="risk_menu" parent="main_risk_menu" />
+    <menuitem name="Risk Names" id="risk_name_menu" parent="risk_menu" action="action_RiskFindings_list"/>
+
 </odoo>
