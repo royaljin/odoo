@@ -5,8 +5,8 @@
         <field name="res_model">rm.riskfindings</field>
         <field name="view_mode">form,tree</field>
     </record>
-    <menuitem name="Risk" id="main_risk_menu" />
-    <menuitem name="Risk List" id="risk_menu" parent="main_risk_menu" />
-    <menuitem name="Risk Names" id="risk_name_menu" parent="risk_menu" action="action_RiskFindings_list"/>
+
+    <menuitem name="Risk" id="main_risk_menu" parent="asset_root_menu" action="action_RiskFindings_list"/>
+
 
 </odoo>
