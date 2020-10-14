@@ -11,7 +11,7 @@ class InvestedAssets(models.Model):
     _order = "DateInvested"
 
     #Asset_ID = fields.Id('Asset ID')
-    name = fields.Char('Department Name', required=True)
+    name = fields.Char('Asset Name', required=True)
     active = fields.Boolean('Active', default=True)
     InvAmount = fields.Integer('Invested Amount')
     DateInvested = fields.Date("Date of Investment")
