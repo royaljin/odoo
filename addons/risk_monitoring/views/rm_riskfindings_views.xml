@@ -6,7 +6,6 @@
         <field name="view_mode">form,tree</field>
     </record>
 
-    <menuitem name="Risk" id="main_risk_menu" parent="asset_root_menu" action="action_RiskFindings_list"/>
-
+    <menuitem name="Risk" id="main_risk_menu" sequence="10" parent="asset_root_menu" action="action_RiskFindings_list"/>
 
 </odoo>
