@@ -8,7 +8,8 @@ class InvestedAssets(models.Model):
     _name = "rm.investedassets"
     _description = "Invested Asset list"
     _rec_name = "name"
-    _order = "DateInvested"
+    _order = "DateInvested desc"
+    # _inherit = ['mail.thread', 'mail.activity.mixin']
 
     #Asset_ID = fields.Id('Asset ID')
     name = fields.Char('Asset Name', required=True)
