@@ -1,13 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
+        <record id="InvestedAssets_tree_view" model="ir.ui.view">
+            <field name="name">rm.investedassets.tree</field>
+            <field name="model">rm.investedassets</field>
+<!--            <field eval="8" name="priority"/>-->
+            <field name="arch" type="xml">
+                <tree string="Invested Asset">
+                    <field name="name"/>
+                    <field name="active"/>
+                    <field name="InvAmount"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="InvestedAssets_form_view" model="ir.ui.view">
+            <field name="name">rm.investedassets.form</field>
+            <field name="model">rm.investedassets</field>
+            <field name="arch" type="xml">
+                <form string="Invested Asset">
+                    <sheet> <!-- will get a box inside the odoo screen -->
+<!--                        <field name="image" widget="image" class="oe_avatar"/>-->
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" placeholder="Fund Name"/>
+                            </h1>
+                        </div>
+                        <group><!-- will contain field name if group is mentioned-->
+                            <group>
+                                <field name="InvAmount"/>
+                            </group>
+                            <group>
+                                <field name="active"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <!-- requires in model
+                        mail.thread
+                        mail.activity.mixin
+                     -->
+<!--                    <div class="oe_chatter">-->
+<!--                        <field name="message_follower_ids"/>-->
+<!--                        <field name="activity_ids"/>-->
+<!--                        <field name="message_ids"/>-->
+<!--                    </div>-->
+                </form>
+            </field>
+        </record>
+
         <record id="action_InvestedAssets_list" model="ir.actions.act_window">
             <field name="name">Invested Asset list</field>
             <field name="res_model">rm.investedassets</field>
             <field name="view_mode">form,tree</field>
+            <field name="context">{}</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create new Assets here!
+                </p>
+            </field>
         </record>
 
-        <menuitem name="Asset Management" id="asset_root_menu" web_icon="risk_monitoring,static/description/icon.png"/>
-        <menuitem name="Asset" id="main_asset_menu" parent="asset_root_menu" action="action_InvestedAssets_list"/>
+        <menuitem name="Asset Management"
+                  id="asset_root_menu"
+                  web_icon="risk_monitoring,static/description/icon.png"/>
+
+        <menuitem name="Asset"
+                  id="main_asset_menu"
+                  parent="asset_root_menu"
+                  action="action_InvestedAssets_list"/>
 
 </odoo>
