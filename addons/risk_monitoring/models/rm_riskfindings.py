@@ -8,7 +8,8 @@ from odoo import fields, models
 class RiskFindings(models.Model):
     _name = "rm.riskfindings"
     _description = "Findings of Asset Risks"
-    _order = 'name'
+    _order = 'FindingDate asc'
+    # _inherit = ['mail.thread', 'mail.activity.mixin']
 
     risk_ID = fields.Char()
     name = fields.Char(string="Risk Description", store=True, readonly=False, tracking=True)
